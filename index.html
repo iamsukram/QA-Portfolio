@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markus Ross Bucu | QA Engineer Portfolio</title>
+<meta name="description" content="QA Analyst and engineer in Metro Manila. Manual and automated testing, SIT/UAT, API testing and defect management across finance, airline and healthcare systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5f8; --surface:#ffffff; --ink:#15202b; --muted:#5a6775; --line:#d5dde5;
+  --pass:#16794f; --pass-bg:#e0f3ea; --accent:#2a55c2;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f161d; --surface:#17212b; --ink:#e8eef4; --muted:#9aa8b6; --line:#2b3947;
+  --pass:#5fd39b; --pass-bg:#173a2b; --accent:#8fb0ff;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans)}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.25rem}
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:.9rem 0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+
+.hero{padding:4rem 0 3rem}
+.hero h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:0 0 .6rem;font-weight:600;letter-spacing:-.02em}
+.hero .role{font-size:1.25rem;color:var(--muted);margin:0 0 1.5rem}
+.run{font-family:var(--mono);font-size:.88rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--pass);border-radius:6px;padding:1rem 1.15rem;margin:0 0 1.75rem;max-width:34rem}
+.run div{display:flex;justify-content:space-between;gap:1rem;padding:.15rem 0}
+.run .k{color:var(--muted)}
+.run .ok{color:var(--pass);font-weight:500}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:500;border:1px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{opacity:.85}
+
+section{padding:2.75rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;margin:0 0 1.25rem;letter-spacing:-.01em}
+p{margin:0 0 1rem;max-width:68ch}
+
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:6px;margin:0 0 .6rem}
+.proj summary{cursor:pointer;padding:.95rem 1.1rem;display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:baseline;list-style:none}
+.proj summary::-webkit-details-marker{display:none}
+.proj summary::before{content:"+";font-family:var(--mono);color:var(--muted);width:1ch}
+.proj[open] summary::before{content:"\2212"}
+.proj .name{font-weight:600}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-left:auto}
+.tag{font-family:var(--mono);font-size:.74rem;padding:.1rem .5rem;border-radius:999px;background:var(--pass-bg);color:var(--pass)}
+.proj ul{margin:0;padding:0 1.1rem 1.1rem 2.4rem;color:var(--ink)}
+.proj li{margin:.25rem 0}
+.proj .sub{margin:0;padding:0 1.1rem .5rem 1.1rem;color:var(--muted);font-size:.92rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.2rem}
+.box h3{margin:0 0 .6rem;font-size:1.05rem}
+.box ul{margin:0;padding-left:1.15rem}
+.box li{margin:.2rem 0}
+.results{list-style:none;margin:0;padding:0}
+.results li{display:flex;gap:1rem;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.9rem 1.1rem;margin:0 0 .6rem}
+.metric{flex:none;min-width:4.2rem;text-align:center;font-family:var(--mono);font-weight:500;padding:.15rem .5rem;border-radius:999px;background:var(--pass-bg);color:var(--pass)}
+.box li strong{font-weight:600}
+h3.sub-h{font-size:1.15rem;margin:2rem 0 .8rem}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.tags{margin-left:0}.hero{padding-top:2.5rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#ai">AI in QA</a><a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="wrap">
+  <div class="hero">
+    <h1>Markus Ross Bucu</h1>
+    <p class="role">QA Analyst and engineer, Metro Manila, Philippines</p>
+    <div class="run" role="group" aria-label="Career summary">
+      <div><span class="k">projects tested</span><span class="ok">11</span></div>
+      <div><span class="k">testing types</span><span>manual, automated, API, UAT</span></div>
+      <div><span class="k">domains</span><span>finance, airline, health</span></div>
+      <div><span class="k">current focus</span><span>DealCloud</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/markusbucu" target="_blank" rel="noopener">LinkedIn profile</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>I am an experienced QA Analyst with a full view of the software testing life cycle. I write test plans, scenarios and scripts, run functional, integration, end-to-end and regression tests, and track defects with developers and business users until they are closed.</p>
+    <p>I have worked on financial platforms, airline booking and loyalty systems, and healthcare software, in both manual and automated testing. I also support live applications, manage user access, and build new objects, calculations and automations in DealCloud.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <details class="proj" open>
+      <summary><span class="name">Primera Connect (DealCloud)</span><span class="tags"><span class="tag">SIT</span><span class="tag">UAT</span><span class="tag">BAU support</span></span></summary>
+      <ul>
+        <li>Create test scenarios and test scripts for SIT and UAT</li>
+        <li>Log, track and discuss defects with business users</li>
+        <li>Run functional, integration, end-to-end and regression tests</li>
+        <li>Support the application in business-as-usual, including adding and removing user access</li>
+        <li>Coordinate with developers and business users</li>
+        <li>Develop new objects, functions, calculations and automations</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">Siebel financial systems</span><span class="tags"><span class="tag">manual</span><span class="tag">automation</span><span class="tag">regression</span></span></summary>
+      <ul>
+        <li>Create the test plan and test cases for each release</li>
+        <li>Execute manual tests, then log and track defects</li>
+        <li>Run the automated regression suite</li>
+        <li>Maintain and update automated scripts for every release</li>
+        <li>Coordinate with developers and business analysts</li>
+        <li>Generate and email test reports for both manual and automated runs</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">GO Rewards: UI automation</span><span class="tags"><span class="tag">Selenium</span><span class="tag">C#</span></span></summary>
+      <ul>
+        <li>Create test cases</li>
+        <li>Write automated UI test scripts with Selenium and C#</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">Cebu Pacific (5J) GetGo</span><span class="tags"><span class="tag">web</span><span class="tag">mobile</span><span class="tag">payments</span></span></summary>
+      <p class="sub"><strong>Main BAU</strong></p>
+      <ul>
+        <li>Test bug fixes and new features and enhancements</li>
+        <li>Bug mashing: compile and document defects and errors</li>
+        <li>Investigate bugs and errors</li>
+        <li>Support users with bookings and accounts</li>
+      </ul>
+      <p class="sub"><strong>Main Revamp</strong></p>
+      <ul>
+        <li>Test field validation and functionality</li>
+        <li>Test responsive design on mobile devices and browsers</li>
+        <li>Test the application process, booking flow and payment processes</li>
+      </ul>
+      <p class="sub"><strong>Mobile</strong></p>
+      <ul>
+        <li>Test responsive design on iOS and Android</li>
+        <li>Test the login flow in the app</li>
+      </ul>
+      <p class="sub"><strong>NS 4.2 Upgrade</strong></p>
+      <ul>
+        <li>Test the reports affected by the New Skies 4.2 upgrade</li>
+        <li>Document defects</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">DTH NEO: Crew API</span><span class="tags"><span class="tag">API</span><span class="tag">end-to-end</span></span></summary>
+      <ul>
+        <li>Create test cases, an API collection and test data</li>
+        <li>Run end-to-end tests from the API through to the DTH web app</li>
+        <li>Run regression tests</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">LIMITLESS</span><span class="tags"><span class="tag">smoke</span><span class="tag">performance</span><span class="tag">cross-browser</span></span></summary>
+      <ul>
+        <li>Create test cases</li>
+        <li>UI testing on web and mobile browsers</li>
+        <li>Regression, smoke and performance testing</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">WellCare</span><span class="tags"><span class="tag">requirements</span><span class="tag">regression</span></span></summary>
+      <ul>
+        <li>Test new functions and features</li>
+        <li>Create test scenarios from the business requirements, then test scripts from the scenarios</li>
+        <li>Document and report defects</li>
+        <li>Run regression tests on the software</li>
+      </ul>
+    </details>
+
+    <details class="proj">
+      <summary><span class="name">DASH AUDIT</span><span class="tags"><span class="tag">front-end</span></span></summary>
+      <ul>
+        <li>Provided web designs for the auditing system</li>
+        <li>Integrated the front end with the back end</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="box"><h3>Testing</h3><ul>
+        <li>Test plans, scenarios, cases and scripts</li>
+        <li>Functional, integration and end-to-end</li>
+        <li>Regression and smoke testing</li>
+        <li>Performance testing</li>
+        <li>SIT and UAT</li>
+        <li>Responsive and mobile testing</li></ul></div>
+      <div class="box"><h3>Automation and API</h3><ul>
+        <li>Selenium with C#</li>
+        <li>Automated regression maintenance</li>
+        <li>API collections and test data</li>
+        <li>End-to-end API to web testing</li></ul></div>
+      <div class="box"><h3>Platforms</h3><ul>
+        <li>DealCloud</li>
+        <li>Siebel</li>
+        <li>New Skies (airline reservations)</li></ul></div>
+      <div class="box"><h3>Process</h3><ul>
+        <li>Defect logging, tracking and reporting</li>
+        <li>BAU application support</li>
+        <li>Working with developers, analysts and business users</li>
+        <li>Test reporting by email</li></ul></div>
+      <div class="box"><h3>Languages</h3><ul>
+        <li>English: advanced</li>
+        <li>Tagalog: native</li></ul></div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2>AI in my daily QA work</h2>
+    <div class="grid">
+      <div class="box"><h3>AI coding assistants</h3><ul>
+        <li>GitHub Copilot</li>
+        <li>Cursor</li>
+        <li>ChatGPT</li>
+        <li>Claude Code</li></ul></div>
+      <div class="box"><h3>Generative AI in QA workflows</h3><ul>
+        <li><strong>Test case and synthetic data generation:</strong> prompt engineering for edge-case coverage, mock API payloads and synthetic datasets</li>
+        <li><strong>Script generation and refactoring:</strong> turning requirement documents (PRDs) into Playwright, Selenium or Cypress scripts</li>
+        <li><strong>Root cause analysis:</strong> automated log parsing, failure classification and stack trace analysis</li>
+        <li><strong>Self-healing automation:</strong> element locators with AI-based self-healing</li></ul></div>
+      <div class="box"><h3>AI security and adversarial testing</h3><ul>
+        <li>Prompt injection</li>
+        <li>Jailbreak testing</li>
+        <li>Output validation</li></ul></div>
+    </div>
+
+    <h3 class="sub-h">Results</h3>
+    <ul class="results">
+      <li><span class="metric">-35%</span><span><strong>Faster test coverage.</strong> I used GitHub Copilot and ChatGPT to draft Playwright test scripts, cutting manual script creation time by 35%.</span></li>
+      <li><span class="metric">-40%</span><span><strong>Self-healing automation.</strong> I set up self-healing UI test suites with Applitools Visual AI and Testim, reducing test maintenance effort by 40%.</span></li>
+      <li><span class="metric">-25%</span><span><strong>Log and defect analysis.</strong> I used LLM log analyzers to automate stack trace parsing, reducing mean time to detect (MTTD) in regression cycles by 25%.</span></li>
+      <li><span class="metric">-80%</span><span><strong>Database testing.</strong> I process test data with AI to compare and validate records, cutting manual cross-checking by 80%.</span></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Open to QA conversations and opportunities. The quickest way to reach me is on LinkedIn.</p>
+    <p><a class="btn primary" href="https://www.linkedin.com/in/markusbucu" target="_blank" rel="noopener">Message me on LinkedIn</a></p>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr">2026</span> Markus Ross Bucu</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
